@@ -13,6 +13,11 @@ Therefore, the main major reason is "Truslessness" and its strong security”. I
 With Amarok Upgrade and a close partnership with Nomad, Modular Interoperability has been introduced which help Connext move closer to the ideal outcome by modularizing the protocol stack 
 (Ref :https://www.youtube.com/watch?v=pnw6x_v0iiY&t=80s). 
 
+### VArt#9432:
+
+Routers in the Connext project are the key link after the user. They can be categorised as an active LP provider because the router is able to adapt to the current market realities.
+The main task of the router is to provide liquidity to the different networks so that Connext users can make cross-chain swaps quickly and cheaply.
+The only way for them to earn money is through commissions, which depend on the total amount of the transaction. But they can't get them right away, because thanks to the partnership with Nomad, users don't have to worry about things like shunning attacks(regular users won't be able to face a conspiracy between routers because of a 30 minute delay in getting commission rewards).
 
 ## Why do we need them in Connext
 
