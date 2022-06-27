@@ -9,6 +9,10 @@
 With the concept of "Trustlessness", Connext implements Router to make no one rely on person or people. They do not need to trust anyone which might be the safe way to move the asset from one chain to another. 
 Therefore, the main major reason is "Truslessness" and its strong security”. It is also undeniable that routers helps provide liquidity on destination chain, which can help to increase the efficiency of Connext.
 
+- Now, Let’s talk about router after the Amarok upgrade, in which this change can be considered as one of the important step and make Routers even more important and a must than before to Connext.
+With Amarok Upgrade and a close partnership with Nomad, Modular Interoperability has been introduced which help Connext move closer to the ideal outcome by modularizing the protocol stack 
+(Ref :https://www.youtube.com/watch?v=pnw6x_v0iiY&t=80s). 
+
 
 ## Why do we need them in Connext
 
