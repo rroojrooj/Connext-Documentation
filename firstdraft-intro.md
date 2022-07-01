@@ -21,5 +21,9 @@ Then the user's fund on the sender chain will be bridged using Nomad. Nomad is a
 
 ## Business Model
 
+The router’s primary business model is to provide liquidity in exchange for a trading fee. Currently, the trading fee is set at five basis points (0.05%) per transaction. `Trading fee = Volume * 0.0005` 
+
+From the beginning of March to late April, the Connext Network made around $20,000,000 of volume per week; this gave the routers around $10000 in trading fees. If in the future, as Connext’s userbase increases, the volume will also increase, which will benefit the routers directly. There is no impermanent loss for providing active LPs.
+
 ## To understand more about Connext, please read:
 
