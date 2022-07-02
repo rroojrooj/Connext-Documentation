@@ -34,6 +34,7 @@ The user funds in the sender chain will then be bridged using Nomad, which is an
 
 ## Business Model
 
-The main business model of the router is to provide liquidity in exchange for a trading commission. The trading fee is currently set at five basis points (0.05%) per transaction. The formula for the calculation is as follows: `Trading fee = Volume * 0.0005` 
+The main business model of the router is to provide liquidity in exchange for a trading commission. The trading fee is currently set at five basis points (0.05%) per transaction. The formula for the calculation is as follows: `Trading fee = Volume * 0.0005`
+
 From the beginning of March to the end of April, Connext Network processed around $20,000,000 of funds per week. Accordingly, an amount of $10,000 has been made available to routers. If trading volume also increases in the future as Connext's user base grows, there will be a direct benefit for routers. Also worth considering, 
 that there is no non-permanent loss at all in granting the bot passive and active LPs.
