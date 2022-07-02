@@ -15,7 +15,7 @@ Then the user’s fund on the sender chain will be bridged using Nomad. Nomad is
 1. The user initiates the transaction by calling the `xcall` function on the Connext contact, which will include: passing in funds, gas details, arbitrary data, and a target address  (including the chain info and this can be a contact). The Connext contact will, if needed, swap the user’s fund to match the Nomad’s token type and call the Nomad contact to start the 30-60 minutes message latency across chains.
 2. Observing routers with funds on the user destination chain will simulate the transaction. If passed, they will use their funds to sign the transaction and send it to an auctioneer (Sequencer), a kind of bidding. The auctioneer collects the router’s bids in every X block and selects the correct router(s) to fill in the user’s transaction.
 3. Then, the auctioneer will group all bids and send them to a relayer network for submitting them on-chain. The contract then 1) checks whether the fund is enough for the transaction, 2) if needed, swaps the Nomad’s token type to match the canonical asset of the chain, and 3)  lastly, sends the fund to the correct target (including executing `calldata` against the target contact). At this point, the user will receive their fund on the destination chain.
-4. For routers, they have not received their fund yet. After  30-60 minutes and the Nomad message arrives, the heavily batched transaction hashes will be checked for their corresponding router addresses. If matched, Nomad assets are minted and paid back to the routers.
+4. For routers, they will not received their fund yet. After  30-60 minutes and the Nomad message arrives, the heavily batched transaction hashes will be checked for their corresponding router addresses. If matched, Nomad assets are minted and paid back to the routers.
 
 ## Security Assumptions and Risks
 
@@ -31,7 +31,7 @@ In other words, the cost to attack an optimistic bridge with N verifiers equals 
 1. Brute force attack on the router's Admin Token. (The Admin Token is used by routers to authenticate requests made to the Router's REST API endpoint.)
 2. If the Docker Router image and VM has a direct connection to the Internet, the router's API endpoint is susceptible to being exposed externally.
 3. The sequencer collects bids from the routers and choose a router to fulfill the transaction request. The system will be down if sequencer downtime occurs.
-4. With fraud proof, funds can be delayed until the disputing watcher (any watcher that can prove fraudulent transaction within the 30 minutes window). So, the router    will have to wait for the funds until the disputing watcher is resolved. 
+4. With fraud-proof, funds can be delayed if any watcher can prove a fraudulent transaction within the 30 minutes window. So, the router will have to wait for the funds until the disputing watcher is resolved.
 5. Router's private key is leaks and liquidity withdrawn from router's wallet.
 
 Refer to [security.md](https://github.com/connext/documentation/blob/main/docs/routers/security.md) and [router community call](https://www.youtube.com/watch?v=rjNcdm1mjCQ) for best practices to mitigate these risks.
