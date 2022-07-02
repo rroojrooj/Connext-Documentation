@@ -19,19 +19,22 @@ Then the user’s fund on the sender chain will be bridged using Nomad. Nomad is
 
 ## Security Assumptions and Risks
 
+### Security Assumptions:
+
 Optimistic bridges differ from externally verified bridges. After the data is posted to the destination, 30 minutes fraud-proof window is started; during this period, if any watcher can prove fraud on the origin chain, the original funds will be transferred to the disputing watcher instead.
 
 Optimistic bridges use a single honest verifier assumption. This means that it requires 1 of N verifiers in the system to verify and update cross-chain data correctly. 
 In other words, the cost to attack an optimistic bridge with N verifiers equals the cost to corrupt or hack N verifiers. As a result, assuming the underlying chains are secure, no amount of money can guarantee that a hack or an attack will be successful. 
 
-Risks
+### Risks:
+
 1. Brute force attack on the router's Admin Token. (The Admin Token is used by routers to authenticate requests made to the Router's REST API endpoint.)
 2. If the Docker Router image and VM has a direct connection to the Internet, the router's API endpoint is susceptible to being exposed externally.
 3. The sequencer collects bids from the routers and choose a router to fulfill the transaction request. The system will be down if sequencer downtime occurs.
 4. With fraud proof, funds can be delayed until the disputing watcher (any watcher that can prove fraudulent transaction within the 30 minutes window). So, the router    will have to wait for the funds until the disputing watcher is resolved. 
 5. Router's private key is leaks and liquidity withdrawn from router's wallet.
 
-Refer to (https://github.com/connext/documentation/blob/main/docs/routers/security.md) for best practices to mitigate these risks.
+Refer to [security.md](https://github.com/connext/documentation/blob/main/docs/routers/security.md) and [router community call](https://www.youtube.com/watch?v=rjNcdm1mjCQ) for best practices to mitigate these risks.
 
 ## Business Model
 
