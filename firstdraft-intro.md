@@ -36,9 +36,13 @@ In other words, the cost to attack an optimistic bridge with N verifiers equals 
 
 Refer to [security.md](https://github.com/connext/documentation/blob/main/docs/routers/security.md) and [router community call](https://www.youtube.com/watch?v=rjNcdm1mjCQ) for best practices to mitigate these risks.
 
+According to [rekt.news](https://rekt.news/leaderboard/), the top three of the leaderboard are all related to bridge exploit. All of the exploits would not have been possible if they had used an optimistic bridge, even if all of the keys were compromised.
+
 ## Business Model
 
-The router’s primary business model is to provide liquidity in exchange for a trading fee. Currently, the trading fee is set at five basis points (0.05%) per transaction. `Trading fee = Volume * 0.0005` 
+The router’s primary business model is to provide liquidity in exchange for a trading fee. Currently, the trading fee is set at five basis points (0.05%) per transaction.
+
+Formula: `Trading fee = Volume * 0.0005` 
 
 From the beginning of March to late April, the Connext Network made around $20,000,000 of volume per week; this gave the routers around $10,000 in trading fees. If in the future, as Connext’s userbase increases, the volume will also increase, which will benefit the routers directly. There is no impermanent loss for providing active LPs.
 
