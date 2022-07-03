@@ -56,3 +56,4 @@ From the beginning of March to late April, the Connext Network made around $20,0
 6. [Announcing the Amarok Network Upgrade (Medium)](https://blog.connext.network/announcing-the-amarok-network-upgrade-5046317860a4)
 7. [A summary of how the Connext Network work. (Twitter Thread)](https://mobile.twitter.com/ConnextNetwork/status/1530611831785541632)
 8. [Modular Interoperability - Layne Haber (Youtube)](https://www.youtube.com/watch?v=pnw6x_v0iiY)
+9. [Trustless Two-Way Bridges With Side Chains By Halting (ETHResearch)](https://ethresear.ch/t/trustless-two-way-bridges-with-side-chains-by-halting/5728)
