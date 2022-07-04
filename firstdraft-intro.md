@@ -49,11 +49,10 @@ From the beginning of March to late April, the Connext Network made around $20,0
 ## To understand more about Connext, please read:
 
 1. [Solving the Liquidity Problem (Medium)](https://blog.connext.network/solving-the-liquidity-problem-88bde201501)
-2. [nxtp: A simpler xchain protocol (Medium)](https://blog.connext.network/nxtp-a-simpler-xchain-protocol-88760697ea04)
-3. [The Interoperability Trilemma (Medium)](https://blog.connext.network/the-interoperability-trilemma-657c2cf69f17)
-4. [Connext has partnered with Nomad (Medium)](https://blog.connext.network/connext-has-partnered-with-nomad-e20cd8e62e31)
-5. [Optimistic Bridges (Medium)](https://blog.connext.network/optimistic-bridges-fb800dc7b0e0)
-6. [Announcing the Amarok Network Upgrade (Medium)](https://blog.connext.network/announcing-the-amarok-network-upgrade-5046317860a4)
-7. [A summary of how the Connext Network work. (Twitter Thread)](https://mobile.twitter.com/ConnextNetwork/status/1530611831785541632)
-8. [Modular Interoperability - Layne Haber (Youtube)](https://www.youtube.com/watch?v=pnw6x_v0iiY)
-9. [Trustless Two-Way Bridges With Side Chains By Halting (ETHResearch)](https://ethresear.ch/t/trustless-two-way-bridges-with-side-chains-by-halting/5728)
+2. [The Interoperability Trilemma (Medium)](https://blog.connext.network/the-interoperability-trilemma-657c2cf69f17)
+3. [Connext has partnered with Nomad (Medium)](https://blog.connext.network/connext-has-partnered-with-nomad-e20cd8e62e31)
+4. [Optimistic Bridges (Medium)](https://blog.connext.network/optimistic-bridges-fb800dc7b0e0)
+5. [Announcing the Amarok Network Upgrade (Medium)](https://blog.connext.network/announcing-the-amarok-network-upgrade-5046317860a4)
+6. [A summary of how the Connext Network work. (Twitter Thread)](https://mobile.twitter.com/ConnextNetwork/status/1530611831785541632)
+7. [Modular Interoperability - Layne Haber (Youtube)](https://www.youtube.com/watch?v=pnw6x_v0iiY)
+8. [Trustless Two-Way Bridges With Side Chains By Halting (ETHResearch)](https://ethresear.ch/t/trustless-two-way-bridges-with-side-chains-by-halting/5728)
