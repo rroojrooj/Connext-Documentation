@@ -2,20 +2,16 @@
 
 ## What are Routers?
 
-Routers are one of the two liquidity providers used in the Connext Network. The router’s role is essential; to provide instant liquidity for the user in the destination chain. Rouetrs are given a fee based on the transaction size in return. Routers then claim the spent fund plus the fee from Nomad afterwards; the latency period is around 30 minutes.
-
-## Why do we need them in Connext?
-
-Routers and Stableswap AMMs are the main TVL and the backbone of the Connext Network. The router’s role when users send funds across blockchain is to provide instant liquidity for the user in the destination chain. 
-
-Then the user’s fund on the sender chain will be bridged using Nomad. Nomad is a cross-chain communication protocol that used fraud-proof ([1 of N watcher](https://blog.connext.network/optimistic-bridges-fb800dc7b0e0)) to relay data across the chain. It works by opening 30 minutes window for the “watcher” to prove fraud. If fraud is proved, the “updater” (data sender) bonded funds will be slashed and given to the disputed watcher. If not, the data passed to the destination chain will be considered finalized. This is when the router receives back its spent fund.
+Routers are one of the two liquidity providers used in the Connext Network. The router’s role is essential; to provide instant liquidity for the user in the destination chain. Routers are given a fee based on the transaction size in return. Routers then claim the spent fund plus the fee from Nomad after the latency period ends, which is around 30 minutes.
 
 ## How do they work?
 
 1. The user initiates the transaction by calling the `xcall` function on the Connext contract, which will include: passing in funds, gas details, arbitrary data, and a target address  (including the chain info and this can be a contract). The Connext contract will, if needed, swap the user’s fund to match the Nomad’s token type and call the Nomad contract to start the 30-60 minutes message latency across chains.
 2. Observing routers with funds on the user destination chain will simulate the transaction. If passed, they will use their funds to sign the transaction and send it to an auctioneer (Sequencer), a kind of bidding. The auctioneer collects the router’s bids in every X block and selects the correct router(s) to fill in the user’s transaction.
 3. Then, the auctioneer will group all bids and send them to a relayer network for on-chain submission. The contract then 1) checks whether the fund is enough for the transaction, 2) if needed, swaps the Nomad’s token type to match the canonical asset of the chain, and 3)  lastly, sends the fund to the correct target (including executing `calldata` against the target contract). At this point, the user will receive their fund on the destination chain.
-4. For routers, they will not received their fund yet. After  30-60 minutes and the Nomad message had arrived, the heavily batched transaction hashes will be checked for their corresponding router addresses. If matched, Nomad assets are minted and paid back to the routers.
+4. For routers, they will not received their fund yet. After  30-60 minutes and the Nomad message had arrived, the heavily batched transaction hashes will be checked for their corresponding router addresses. If matched, Nomad assets are minted and paid back to the routers. 
+
+Nomad is a cross-chain communication protocol that used fraud-proof ([1 of N watcher](https://blog.connext.network/optimistic-bridges-fb800dc7b0e0)) to relay data across the chain. It works by opening 30 minutes window for the “watcher” to prove fraud. If fraud is proved, the “updater” (data sender) bonded funds will be slashed and given to the disputed watcher. If not, the data passed to the destination chain will be considered finalized. This is when the router receives back its spent fund.
 
 ## Security Assumptions and Risks
 
