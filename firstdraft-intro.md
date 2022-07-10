@@ -6,6 +6,8 @@ Routers are one of the two liquidity providers used in the Connext Network. The 
 
 ## How do they work?
 
+The user initiates the transaction through a front end which is linked to the Connext Network smart contracts. At the technical level, these are the whole process:
+
 1. The user initiates the transaction by calling the `xcall` function on the Connext contract, which will include: passing in funds, gas details, arbitrary data, and a target address  (including the chain info and this can be a contract). The Connext contract will, if needed, swap the user’s fund to match the Nomad’s token type and call the Nomad contract to start the 30-60 minutes message latency across chains.
 2. Observing routers with funds on the user destination chain will simulate the transaction. If passed, they will use their funds to sign the transaction and send it to an auctioneer (Sequencer), a kind of bidding. The auctioneer collects the router’s bids in every X block and selects the correct router(s) to fill in the user’s transaction.
 3. Then, the auctioneer will group all bids and send them to a relayer network for on-chain submission. The contract then 1) checks whether the fund is enough for the transaction, 2) if needed, swaps the Nomad’s token type to match the canonical asset of the chain, and 3)  lastly, sends the fund to the correct target (including executing `calldata` against the target contract). At this point, the user will receive their fund on the destination chain.
