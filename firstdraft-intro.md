@@ -44,6 +44,10 @@ Formula: `Trading fee = Volume * 0.0005`
 
 From the beginning of March to late April, the Connext Network made around $20,000,000 of volume per week; this gave the routers around $10,000 in trading fees. If in the future, as Connext’s userbase increases, the volume will also increase, which will benefit the routers directly. There is no impermanent loss for providing active LPs.
 
+## Routers Vs. Stableswaps AMMs
+
+There are two types of liquidity providers in the Connext Network. Routers are called “active” LP providers, whereas Stableswaps AMMs are called “passive”. 
+
 ## To understand more about Connext, please read:
 
 1. [Solving the Liquidity Problem (Medium)](https://blog.connext.network/solving-the-liquidity-problem-88bde201501)
