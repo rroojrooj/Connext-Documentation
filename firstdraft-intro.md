@@ -38,15 +38,23 @@ According to [rekt.news](https://rekt.news/leaderboard/), the top three of the l
 
 ## Business Model
 
-The router’s primary business model is to provide liquidity in exchange for a trading fee. Currently, the trading fee is set at five basis points (0.05%) per transaction.
+The router’s primary business model is to provide liquidity in exchange for a trading fee. Currently, the trading fee is hard-coded at five basis points (0.05%) per transaction.
 
 Formula: `Trading fee = Volume * 0.0005` 
 
 From the beginning of March to late April, the Connext Network made around $20,000,000 of volume per week; this gave the routers around $10,000 in trading fees. If in the future, as Connext’s userbase increases, the volume will also increase, which will benefit the routers directly. There is no impermanent loss for providing active LPs.
 
-## Routers Vs. Stableswaps AMMs
+## Routers (Active) Vs. Stableswaps AMMs (Passive)
 
-There are two types of liquidity providers in the Connext Network. Routers are called “active” LP providers, whereas Stableswaps AMMs are called “passive”. 
+There are two types of liquidity providers in the Connext Network. Routers are called “active” liquidity providers, whereas Stableswaps AMMs are called “passive”. Routers or active LPs provide instant liquidity in the destination chain and then claim their funds back from Nomad, as stated earlier. For active LPs, the users need to set up a router in order to provide liquidity and support the functioning of the network.
+
+To clarify, the reason for claiming the funds back from Nomad is because Connext Network used Nomad as the settlement layer. Nomad locks assets on the sender chain (ex. DAI) and mints an ultra-secure representation of those assets on the destination chain (madDAI). The process will work perfectly for chains that used madAssets as their dominant token type, such as the Evmos chain (any IBC-connected chain in the future). When the user sends DAI and receives madDAI in Evmos, they can instantly swap it on a DEX.
+
+What if madAssets are not the most adopted assets on a chain?
+
+Polygon chain, for example, the dominant representation of assets, comes from the Polygon official bridge. The representation of ETH on Polygon is PoSETH (they called it normal “ETH”). If we gave madDAI to the users on Polygon, they would not be able to use them immediately as those assets are not the adopted assets. Therefore, we need to swap madAssets to the adopted assets on that chain. This is where passive LPing come in. 
+
+Stableswaps AMMs (Automated Market Maker for assets that value tends to be pegged to each other) or passive LPs will be deployed on each chain. The Connext Network will automatically go through the AMM if they need to swap the assets type.
 
 ## To understand more about Connext, please read:
 
