@@ -38,7 +38,7 @@ According to [rekt.news](https://rekt.news/leaderboard/), the top three of the l
 
 ## Business Model
 
-The router’s primary business model is to provide liquidity in exchange for a trading fee. Currently, the trading fee is hard-coded at five basis points (0.05%) per transaction.
+The router’s primary business model is to provide liquidity in exchange for a trading fee. The trading fee is hard-coded at five basis points (0.05%) per transaction.
 
 Formula: `Trading fee = Volume * 0.0005` 
 
