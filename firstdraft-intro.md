@@ -48,15 +48,17 @@ From the beginning of March to late April, the Connext Network made around $20,0
 
 There are two types of liquidity providers in the Connext Network. Routers are called “active” liquidity providers, whereas Stableswaps AMMs are called “passive”. Routers or active LPs provide instant liquidity in the destination chain and then claim their funds back from Nomad, as stated earlier. For active LPs, the users need to set up a router in order to provide liquidity and support the functioning of the network.
 
-To clarify, the reason for claiming the funds back from Nomad is because Connext Network used Nomad as the settlement layer. Nomad locks assets on the sender chain (ex. DAI) and mints an ultra-secure representation of those assets on the destination chain (madDAI). The process will work perfectly for chains that used madAssets as their dominant token type, such as the Evmos chain (any IBC-connected chain in the future). When the user sends DAI and receives madDAI in Evmos, they can instantly swap it on a DEX.
+The reason for claiming the funds back from Nomad is because Connext Network used Nomad as the settlement layer. Nomad locks assets on the sender chain (ex. DAI) and mints an ultra-secure representation of those assets on the destination chain (madDAI). The process will work perfectly for chains that used madAssets as their dominant token type, such as the Evmos chain (any IBC-connected chain in the future). When the user sends DAI and receives madDAI in Evmos, they can instantly swap it on a DEX.
 
-What if madAssets are not the most adopted assets on a chain?
+**What if madAssets are not the adopted assets on that chain?**
 
 Polygon chain, for example, the dominant representation of assets, comes from the Polygon official bridge. The representation of ETH on Polygon is PoSETH (they called it normal “ETH”). If we gave madDAI to the users on Polygon, they would not be able to use them immediately as those assets are not the adopted assets. Therefore, we need to swap madAssets to the adopted assets on that chain. This is where passive LPing come in. 
 
 Stableswaps AMMs (Automated Market Maker for assets that value tends to be pegged to each other) or passive LPs will be deployed on each chain. The Connext Network will automatically go through the AMM if they need to swap the assets type. The AMM will be a Curve-fork, and the LP providers will receive some fee based on the transaction size. Depending on the route, the flow might include 2 AMMs to convert the adopted asset types on one chain into madAssets and then reconverted back on the destination chain afterwards (mostly happens when bridging between EVM chains).
 
-`madAssets are the only assets that can be moved trustlessly across seperate domains and chains through Nomad`
+> madAssets are the only assets that can be moved trustlessly across seperate domains and chains through Nomad
+
+
 
 ## To understand more about Connext, please read:
 
